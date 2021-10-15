@@ -1,0 +1,150 @@
+/*GEOM101 | Project 2 | Personal Webpage | Janelli Powell*/
+/*This .css file contains all the CSS properties for Project 2 */
+
+/*This is universal selector*/
+*{
+    box-sizing: border-box;
+    text-align: center; 
+}
+
+/*Header section*/
+header{
+    font-family:sans-serif;
+    color:#397249;
+    background-color: #C7E1BA;
+    padding: 15px; /*this is to create space around this element*/
+    text-align: center;
+
+    /*fixed header - so the header won't move up when I scroll down*/
+    position:fixed;
+    top:0;
+    width: 100%;  
+    height: 200px;
+}
+
+/*Overriding 3 default styles of the <h> tags*/
+h1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.8em;
+}
+
+h2{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5em;
+}
+
+h3{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+}
+
+/*Overriding 3 default styles of the <p> tag */
+p{
+    margin-inline-start: 1.5px;
+    margin-block-start: 1.5em;
+    margin-block-end: 1.5em;
+}
+
+p.b{
+    color: #397249;
+}
+
+/*Navigation Bar sectioin */
+nav{
+    font-family:sans-serif;
+    overflow:hidden;
+    background-color: #F3D5BD;
+    text-align: center;
+
+    /*fixed navigation bar*/
+    position: fixed;
+    top:200px;
+    width:100%;
+}
+
+/*Navigation Bar Links*/
+nav a{
+    /*I want the block to float from left to right*/
+    float:left;
+    color:white;
+    padding:25px;
+    text-decoration: none; /*this will remove the underline of the link*/
+    display: block; 
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    width:25%;
+}
+
+/*When user is hovers*/
+nav a:hover{
+    background-color: #F6E4CC;
+    color:#397249;
+}
+
+/*When user selects - tried it but it's not working, not sure why*/
+nav a:active {
+    background-color: #F6E4CC;
+    color:#397249;
+}
+
+
+/*Content section*/
+main{
+    font-family:sans-serif;
+    text-align:center;
+    margin-top:267px; 
+    padding-top: 10px;
+    color: #397249;
+}
+
+.main img{
+    width: 100%;
+    height: auto;
+}
+
+/*Footer section*/
+footer{
+    font-family:sans-serif;
+    color:white;
+    text-align: center;
+    background-color:#628B61;
+
+    /*fixed footer*/
+    position:fixed;
+    left: 0;
+    bottom: 0;
+    width:100%;
+}
+
+footer a{
+    color: white;
+}
+
+
+/*This is just an experiment as I'm trying to learn to create a simple photo grid using flex container. source: w3schools*/
+.row{
+    display: -ms-flexbox; /*flexible boxes - supported in Chrome but not IE 10*/
+    display: flex; /*or inline-flex*
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; /*flex items will wwrap  onto multiple lines from top to bottom*/
+    justify-content: center; /*items are centred along the line */
+    padding: 0 5px;
+}
+  
+/*Create four equal columns for the photos*/
+.column{
+    -ms-flex: 25%; 
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 5px;
+}
+
+/*Image style in the photo grid that I'm trying to create, not sure if it's going to be successful*/
+.column img{
+    margin-top: 5px;
+    vertical-align: middle;
+    width: 100%;
+    height:auto;
+}
